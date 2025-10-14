@@ -63,9 +63,9 @@ const App = () => {
           <div className="flex items-center justify-between text-xs text-gray-600">
             <div className="flex items-center gap-2">
               <Info className="w-4 h-4" />
-              <span>임상 의사결정 지원 도구 · 최종 판단은 의료진이 수행</span>
+              <span>임상 의사결정 지원 도구 · 최종 판단은 의료진이 수행합니다</span>
             </div>
-            <div>Model v4.2.1 · 데이터 지연 &lt;5분</div>
+            <div>Model v4.2.1 · Korea Clinical Datathon 2025</div>
           </div>
         </div>
       </footer>

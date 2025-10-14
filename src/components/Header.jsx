@@ -31,7 +31,7 @@ const Header = () => (
             <div className="text-xs text-gray-600">2025.10.13 14:23</div>
           </div>
           <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
-            의
+            S
           </div>
         </div>
       </div>
