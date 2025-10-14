@@ -1,5 +1,4 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [ "main" ]
@@ -9,10 +8,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -25,9 +20,7 @@ jobs:
           cache: 'npm'
       - run: npm ci || npm i
       - run: npm run build
-  
-      - run: cp dist/index.html dist/404.html   # ★ SPA 서브라우트용
-
+      - run: cp dist/index.html dist/404.html   # SPA fallback
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
