@@ -1,0 +1,5 @@
+[
+  { "id": "d001", "name": "김의사", "email": "doctor.kim@example.com", "unit": "ICU-1" },
+  { "id": "d002", "name": "박의사", "email": "doctor.park@example.com", "unit": "ICU-1" },
+  { "id": "d003", "name": "최의사", "email": "doctor.choi@example.com", "unit": "ICU-2" }
+]

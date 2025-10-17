@@ -1,0 +1,28 @@
+[
+  {
+    "stay_id": "P001",
+    "timestamp": "2025-10-13T14:00:00Z",
+    "risk": 0.67,
+    "cluster_id": "C2",
+    "top_features": [
+      { "name": "MAP mean", "value": 62, "contrib": -0.18, "unit": "mmHg", "ref": "70-100" },
+      { "name": "HR std", "value": 18.3, "contrib": 0.12, "unit": "bpm", "ref": "<15" },
+      { "name": "SpO2 min", "value": 88, "contrib": -0.21, "unit": "%", "ref": ">92" }
+    ],
+    "alert_flag": true,
+    "threshold_used": 0.28
+  },
+  {
+    "stay_id": "P001",
+    "timestamp": "2025-10-14T02:00:00Z",
+    "risk": 0.51,
+    "cluster_id": "C1",
+    "top_features": [
+      { "name": "MAP mean", "value": 68, "contrib": -0.10, "unit": "mmHg", "ref": "70-100" },
+      { "name": "HR std", "value": 15.2, "contrib": -0.05, "unit": "bpm", "ref": "<15" },
+      { "name": "SpO2 min", "value": 91, "contrib": -0.09, "unit": "%", "ref": ">92" }
+    ],
+    "alert_flag": false,
+    "threshold_used": 0.28
+  }
+]
