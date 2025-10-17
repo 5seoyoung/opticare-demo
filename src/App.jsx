@@ -59,10 +59,7 @@ const App = () => {
           <DashboardView patients={mockPatients} onSelectPatient={handleSelectPatient} />
         )}
 
-        {activeView === 'triage' && (
-          // t0: 초기 트리아지 카드 (컴포넌트 내부에서 mock 데이터/폼 사용)
-          <TriageCard />
-        )}
+        {activeView === 'triage' && <TriageCard />}
 
         {activeView === 'patient' && (
           <PatientDetailView
@@ -74,13 +71,9 @@ const App = () => {
           />
         )}
 
-        {activeView === 'timeline' && (
-          // t2: 재평가/타임라인 패널 (필요시 props 확장)
-          <TimelinePanel patients={mockPatients} />
-        )}
+        {activeView === 'timeline' && <TimelinePanel patients={mockPatients} />}
 
         {activeView === 'recommendations' && (
-          // 권고/알림: 의사 선택 → 이메일 전송까지
           <RecommendationsView
             patients={mockPatients}
             threshold={threshold}
