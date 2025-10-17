@@ -1,10 +1,14 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App'
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import ErrorBoundary from "./components/ErrorBoundary.jsx"; // ✅ default import
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>
-)
+);

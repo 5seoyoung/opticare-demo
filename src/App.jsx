@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from 'react';
 import { Activity, Users, Zap, Info, ShieldAlert, Clock } from 'lucide-react';
 
@@ -9,7 +8,13 @@ import RecommendationsView from './components/RecommendationsView';
 import TriageCard from './components/TriageCard';
 import TimelinePanel from './components/TimelinePanel';
 
-import { patients as mockPatients, kmData, topFeatures } from './data/mockData';
+import {
+  patients as mockPatients,
+  kmData,
+  topFeatures,
+  beds as mockBeds,
+  floorplan,
+} from './data/mockData';
 
 const App = () => {
   const [activeView, setActiveView] = useState('dashboard');
@@ -30,9 +35,8 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-slate-50">
       <Header />
-
       <nav className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex gap-6 overflow-x-auto no-scrollbar">
@@ -56,7 +60,12 @@ const App = () => {
 
       <main className="max-w-7xl mx-auto px-6 py-6">
         {activeView === 'dashboard' && (
-          <DashboardView patients={mockPatients} onSelectPatient={handleSelectPatient} />
+          <DashboardView
+            patients={mockPatients}
+            beds={mockBeds}
+            layout={floorplan}
+            onSelectPatient={handleSelectPatient}
+          />
         )}
 
         {activeView === 'triage' && <TriageCard />}
